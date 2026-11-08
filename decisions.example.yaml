@@ -1,0 +1,19 @@
+# Editor decisions for the demo show. Applied after the AI run; the AI-only report is kept unchanged.
+names:
+  - canonical: Raichand
+    same_as: [Raichandani, Raychand]
+    note: "company name: Raichand Group"
+  - canonical: Vikram
+    same_as: [Vikrant]
+speakers:
+  - canonical: MEERA
+    same_person: [MS. MEERA]
+    deliberate: false
+  - canonical: ARJUN
+    same_person: [MYSTERIOUS RIDER]
+    deliberate: true
+    note: "identity hidden on screen in Episode 1; map to Arjun's voice and face"
+traits:
+  - character: Arjun
+    trait: eye_colour
+    canonical_value: hazel

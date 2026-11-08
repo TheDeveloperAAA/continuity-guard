@@ -1,0 +1,62 @@
+EPISODE NUMBER: Episode 2
+EPISODE LOGLINE: Meera cuts her hair to start over and learns the rider is named Arjun, while Vikram brags about a contract with the Raichand Group.
+CONTINUITY NOTES: Picks up after Episode 1's cliffhanger. The rider is now named Arjun.
+
+--- SCRIPT START ---
+
+SCENE 01
+Scene heading: INT. MEERA'S CHAI STALL - DAY
+Scene start: 00:00.00
+Scene end: 00:33.20
+
+Actions and dialogue:
+
+**CAMERA:**
+Start: (00:00.00) | End: (00:03.00)
+Morning light falls on a small chai stall as steam curls from a dented kettle.
+
+**ACTION:**
+Start: (00:03.10) | End: (00:06.50)
+Meera looks into a cracked mirror and cuts her long braid short with steady hands.
+
+**CAMERA:**
+Start: (00:06.60) | End: (00:09.60)
+Medium shot of Meera, her hair now cut short at the jaw, pouring tea with new resolve.
+
+**ARJUN (Warm):**
+Start: (00:09.70) | End: (00:11.70)
+"Short hair suits a fresh start."
+
+**MEERA (Surprised):**
+Start: (00:11.80) | End: (00:14.20)
+"You again. You never told me your name."
+
+**ARJUN (Smiling):**
+Start: (00:14.30) | End: (00:16.30)
+"Arjun. Just Arjun, for now."
+
+**CAMERA:**
+Start: (00:16.40) | End: (00:19.40)
+Close-up of Arjun's hazel eyes as he studies an embossed Raichand Group card in Meera's stall.
+
+**ACTION:**
+Start: (00:19.50) | End: (00:22.70)
+Vikram pulls up in a white sedan, waving a contract printed on Raichand Group letterhead.
+
+**VIKRAM (Boastful):**
+Start: (00:22.80) | End: (00:26.40)
+"The Raichand Group signed my company today, Meera. You lost a fortune."
+
+**MEERA (Firm):**
+Start: (00:26.50) | End: (00:28.90)
+"Chai thandi ho gayi, Vikram. Go home."
+
+**ARJUN (Quiet):**
+Start: (00:29.00) | End: (00:31.00)
+"Contracts can be cancelled."
+
+**SOUND FX:**
+Start: (00:31.10) | End: (00:33.10)
+A low synth pulse swells into a cliffhanger sting.
+
+--- SCRIPT END ---

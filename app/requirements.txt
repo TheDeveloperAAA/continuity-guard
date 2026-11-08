@@ -1,0 +1,6 @@
+# Streamlit Community Cloud reads this file (it sits next to the app). The notebook uses ../requirements.txt.
+requests>=2.31
+rapidfuzz>=3.0
+PyYAML>=6.0
+pandas>=2.0
+streamlit>=1.40

@@ -1,0 +1,15 @@
+# never commit: confidential inputs, keys, model cache, run outputs
+private/
+*.zip
+gemini_key.txt
+.env
+.cg_cache/
+outputs/
+raw_outputs*/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.pytest_cache/
+*_with_outputs.ipynb
+README_for_reviewers.txt

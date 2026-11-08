@@ -1,0 +1,95 @@
+# All prompts in one place. Placeholders use $name (Python string.Template), so JSON braces need no escaping.
+
+reader_system: |
+  You are a meticulous continuity assistant for an AI microdrama studio. You extract facts from scripts.
+  Never invent anything. Every item must cite a block id that appears in the input, and its quote must be
+  copied word for word from that block (5 to 15 words). Output one JSON object only.
+
+reader_user: |
+  Below are episodes $episode_range of a microdrama series. Each line starts with [BLOCK_ID location KIND SPEAKER].
+  Lines with ids ending in -LOGLINE or -NOTES are the episode summary and continuity notes.
+
+  Extract three lists.
+
+  1. "names": every proper name of a person, family or house, estate or manor, company, place, title (for "Duke of X" give X),
+     organisation or named object, exactly as spelled. One entry per distinct spelling per episode.
+     Fields: name, kind (person | family_or_house | place | title | organisation | object),
+     refers_to (who or what it denotes, as specific as the text allows, e.g. "the business group owned by the hero's family"),
+     block, quote.
+
+  2. "speakers": for each of these speaker labels used in these episodes: $speaker_labels
+     Fields: label (exactly as given), identity (the character's proper name if these episodes reveal it,
+     otherwise a short description such as "masked rider who defends the heroine"), block, quote.
+
+  3. "traits": stable physical traits and signature items of characters: eye colour, hair colour or length,
+     facial hair, scars, distinctive items such as a ring or pendant. Skip temporary states (tears, blood, mud,
+     expressions, clothing that changes from scene to scene). Resolve "his"/"her" from context.
+     Fields: character (proper name if known, else the speaker label), trait (eye_colour | hair | facial_hair | scar |
+     signature_item | other_stable), value (as written, e.g. "green eyes"),
+     deliberate_change (true only if the script shows the trait changing on purpose, e.g. he shaves off his moustache on screen), block, quote.
+
+  Return exactly: {"names": [...], "speakers": [...], "traits": [...]}
+
+  SCRIPT:
+  $episodes_text
+
+judge_names_system: |
+  You are the continuity editor of an AI microdrama series. You decide whether differently written names or
+  speaker labels refer to the same thing. Be conservative: call something a mistake only when the story clearly
+  points to the same entity. Use only the evidence given. Output one JSON object only.
+
+judge_names_user: |
+  Series synopsis (one line per episode):
+  $synopsis
+
+  Candidate groups. Each lists spellings (type NAME) or speaker labels (type SPEAKER), where they appear,
+  example lines, and what a reading pass said they refer to:
+  $candidates_json
+
+  For each candidate, split ALL its members into groups. Each group gets one verdict:
+  - "inconsistent": the same entity written differently by mistake. Pick the canonical form
+    (prefer the most frequent or most official form unless the story says otherwise).
+  - "deliberate": the same character, but the different label is intentional on screen
+    (for example the name is not revealed yet). The text stays; production maps them to one identity.
+  - "distinct": genuinely different entities. Put each distinct entity in its own group.
+  - "uncertain": the evidence cannot decide.
+  Watch for look-alike names that belong to different families or places: a character's birth family name and her
+  husband's house are different entities, and two names used side by side for different people are distinct.
+  A cover name or nickname used on purpose is "deliberate", not "inconsistent".
+  Give a confidence from 0 to 1 and a one-sentence reason that cites the evidence.
+
+  Return exactly:
+  {"decisions": [{"id": "<candidate id>", "groups": [{"members": [...], "canonical": "...", "verdict": "...", "confidence": 0.0, "reason": "..."}]}]}
+
+judge_traits_system: |
+  You are the continuity editor of an AI microdrama series. You check whether a character's stable physical traits
+  are described consistently across episodes. Be conservative and use only the evidence given. Output one JSON object only.
+
+judge_traits_user: |
+  Each candidate lists one character's trait as described in different episodes, with quotes.
+  Decide for each:
+  - "inconsistent": the descriptions contradict each other by mistake. Give the canonical value
+    (usually the most frequent) and list the values that should be corrected.
+  - "deliberate": the change is intentional in the story (for example he shaves off his moustache on screen).
+  - "compatible": the descriptions do not really conflict (for example "brown" and "dark brown" can be the same eyes).
+  - "uncertain": cannot decide.
+  Give a confidence from 0 to 1 and a one-sentence reason.
+
+  $candidates_json
+
+  Return exactly:
+  {"decisions": [{"id": "<candidate id>", "verdict": "...", "canonical_value": "...", "values_to_fix": [...], "confidence": 0.0, "reason": "..."}]}
+
+baseline_system: |
+  You are a script continuity editor. Output one JSON object only.
+
+baseline_user: |
+  Below is the complete script of a microdrama series (each line starts with its block id).
+  List every continuity error you can find: the same person, family, place or title spelled differently;
+  the same character given different speaker names; contradictory physical traits (eye colour, hair, scars,
+  signature items). For each error give the episode number, block id, the exact quote and what is wrong.
+
+  Return exactly: {"issues": [{"episode": 0, "block": "...", "quote": "...", "issue": "..."}]}
+
+  SCRIPT:
+  $show_text

@@ -1,0 +1,74 @@
+EPISODE NUMBER: Episode 1
+EPISODE LOGLINE: At her engagement in Mumbai, chai-seller's daughter Meera is dumped by Vikram for her cousin Tanya, until a silent delivery rider steps in.
+CONTINUITY NOTES: First episode. Establishes Meera, Vikram, cousin Tanya and the mysterious rider.
+
+--- SCRIPT START ---
+
+SCENE 01
+Scene heading: INT. BANQUET HALL - NIGHT
+Scene start: 00:00.00
+Scene end: 00:40.80
+
+Actions and dialogue:
+
+**CAMERA:**
+Start: (00:00.00) | End: (00:03.00)
+Wide shot of a glittering banquet hall decorated with marigold strings as guests turn toward the stage.
+
+**ACTION:**
+Start: (00:03.10) | End: (00:06.60)
+Meera steps onto the stage in her late mother's red saree, her long black hair braided with jasmine.
+
+**VIKRAM (Cold):**
+Start: (00:06.70) | End: (00:08.50)
+"Stop right there, Meera."
+
+**MEERA (Confused):**
+Start: (00:08.60) | End: (00:11.00)
+"Vikram? Everyone is waiting for the rings."
+
+**CAMERA:**
+Start: (00:11.10) | End: (00:13.70)
+Close-up on Vikram slipping the engagement ring onto Tanya's finger instead.
+
+**TANYA (Smug):**
+Start: (00:13.80) | End: (00:16.40)
+"He chose family money, cousin. He chose me."
+
+**MEERA (Heartbroken):**
+Start: (00:16.50) | End: (00:19.30)
+"Tanya... you are my cousin. How could you?"
+
+**VIKRAM (Dismissive):**
+Start: (00:19.40) | End: (00:22.80)
+"The Raichand Group will never hire a chai-seller's daughter's husband."
+
+**ACTION:**
+Start: (00:22.90) | End: (00:26.10)
+Guests laugh as a delivery rider in a dusty helmet walks in carrying a stack of tiffin boxes.
+
+**CAMERA:**
+Start: (00:26.20) | End: (00:29.20)
+Close-up as the rider lifts his visor, revealing calm hazel eyes and a thin scar on his left eyebrow.
+
+**MYSTERIOUS RIDER (Calm):**
+Start: (00:29.30) | End: (00:31.90)
+"She is worth more than this entire hall."
+
+**VIKRAM (Mocking):**
+Start: (00:32.00) | End: (00:34.20)
+"And who are you? The tiffin boy?"
+
+**MYSTERIOUS RIDER (Quiet):**
+Start: (00:34.30) | End: (00:36.50)
+"Someone who keeps his promises."
+
+**SOUND FX:**
+Start: (00:36.60) | End: (00:38.60)
+A tense tabla roll rises to a sharp cliffhanger hit.
+
+**CAMERA:**
+Start: (00:38.70) | End: (00:40.70)
+The rider offers Meera his hand as the screen cuts to black.
+
+--- SCRIPT END ---
