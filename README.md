@@ -17,7 +17,7 @@ the evidence), a severity (spoken line = High, camera/action = Medium, notes = L
 Once the editor confirms decisions, it writes corrected scripts plus a diff, and a **series bible** whose
 short "continuity sheet" can be pasted into the next episode's writing prompt to prevent drift.
 
-**Try it:** [web app](https://continuityguard.streamlit.app) (run the built-in demo or upload a show; no install) · [Colab notebook](https://colab.research.google.com/github/TheDeveloperAAA/continuity-guard/blob/main/ContinuityGuard.ipynb) (`Runtime -> Run all`). No key needed for code-only mode.
+**Try it:** [web app](https://continuity-guard-bn3pffh6zvwsfnnzbialqf.streamlit.app) (run the built-in demo or upload a show; no install) · [Colab notebook](https://colab.research.google.com/github/TheDeveloperAAA/continuity-guard/blob/main/ContinuityGuard.ipynb) (`Runtime -> Run all`). No key needed for code-only mode.
 
 ![Web app](docs/app_demo.png)
 
@@ -47,7 +47,7 @@ script files ──> parser (code) ──> code checks ────────�
 
 ## Run it
 
-**Web app:** https://continuityguard.streamlit.app. Pick the demo show or upload a `.zip` of episode `.txt` files, then choose **Code only** (free, instant), **Replay a recorded run** (upload a `raw_outputs.zip`; no key) or **Live AI** (paste your own key; any OpenAI-compatible endpoint and model). You get the issues to decide, every flag with its quote and timestamp, the full report, the series bible, and corrected scripts when you add a decisions file. Run it locally with `pip install -r app/requirements.txt` and `streamlit run app/streamlit_app.py`.
+**Web app:** https://continuity-guard-bn3pffh6zvwsfnnzbialqf.streamlit.app. Pick the demo show or upload a `.zip` of episode `.txt` files, then choose **Code only** (free, instant), **Replay a recorded run** (upload a `raw_outputs.zip`; no key) or **Live AI** (paste your own key; any OpenAI-compatible endpoint and model). You get the issues to decide, every flag with its quote and timestamp, the full report, the series bible, and corrected scripts when you add a decisions file. Run it locally with `pip install -r app/requirements.txt` and `streamlit run app/streamlit_app.py`.
 
 **Colab (recommended):** open the notebook link above and run all cells. You don't need to upload anything; it checks the bundled demo show.
 To check a real show, put files in `/content/inputs/`. The notebook picks them up automatically:
